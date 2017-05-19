@@ -1,4 +1,3 @@
-<diy-header></diy-header>
 <template>
 <el-menu default-active="2" class="el-menu-vertical-demo" >
 	<el-submenu index="1">
@@ -27,3 +26,15 @@
 	</el-menu-item>
 </el-menu>
 </template>
+<script>
+  export default {
+    methods: {
+      handleOpen (key, keyPath) {
+        console.log(key, keyPath)
+      },
+      handleClose (key, keyPath) {
+        console.log(key, keyPath)
+      }
+    }
+  }
+</script>
