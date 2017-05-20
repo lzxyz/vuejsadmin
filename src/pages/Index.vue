@@ -1,39 +1,81 @@
 <template>
-<el-menu default-active="2" class="el-menu-vertical-demo" >
-	<el-submenu index="1">
-		<template slot="title"> <i class="el-icon-message"></i>
-			导航一
-		</template>
-		<el-menu-item-group>
-			<template slot="title">分组一</template>
-			<el-menu-item index="1-1">选项1</el-menu-item>
-			<el-menu-item index="1-2">选项2</el-menu-item>
-		</el-menu-item-group>
-		<el-menu-item-group title="分组2">
-			<el-menu-item index="1-3">选项3</el-menu-item>
-		</el-menu-item-group>
-		<el-submenu index="1-4">
-			<template slot="title">选项4</template>
-			<el-menu-item index="1-4-1">选项1</el-menu-item>
-		</el-submenu>
-	</el-submenu>
-	<el-menu-item index="2"> <i class="el-icon-menu"></i>
-		导航二
-	</el-menu-item>
-	<el-menu-item index="3">
-		<i class="el-icon-setting"></i>
-		导航三
-	</el-menu-item>
-</el-menu>
+    <el-row>
+        <el-row>
+            <el-col :span="24" style="height: 30px">
+                <el-breadcrumb separator="/">
+                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                    <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+                    <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+                    <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+                </el-breadcrumb>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24">
+                <el-table
+                        ref="multipleTable"
+                        :data="tableData3"
+                        border
+                        tooltip-effect="dark"
+                        style="width: 99%"
+                        :default-sort = "{prop: 'date', order: 'descending'}"
+                        @selection-change="handleSelectionChange">
+                    <el-table-column
+                            type="selection"
+                            width="55">
+                    </el-table-column>
+                    <el-table-column
+                            label="日期"
+                            prop="date"
+                            sortable
+                            width="120">
+                        <template scope="scope">{{ scope.row.date }}</template>
+                    </el-table-column>
+                    <el-table-column
+                            prop="name"
+                            label="姓名"
+                            sortable
+                            width="120">
+                    </el-table-column>
+                    <el-table-column
+                            prop="address"
+                            label="地址"
+                            sortable
+                            show-overflow-tooltip>
+                    </el-table-column>
+                </el-table>
+            </el-col>
+        </el-row>
+    </el-row>
+
 </template>
+
 <script>
   export default {
+    data () {
+      return {
+        tableData3: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1517 弄'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1519 弄'
+        }, {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1516 弄'
+        }]
+      }
+    },
     methods: {
-      handleOpen (key, keyPath) {
-        console.log(key, keyPath)
-      },
-      handleClose (key, keyPath) {
-        console.log(key, keyPath)
+      formatter (row, column) {
+        return row.address
       }
     }
   }

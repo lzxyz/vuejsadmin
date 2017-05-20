@@ -1,0 +1,30 @@
+.bg-blue{
+    background: #20A0FF;
+}
+.bg-blue-light{
+    background: #58B7FF;
+}
+.bg-blue-dark{
+    background: #1D8CE0;
+}
+.bg-success{
+    background: #13CE66;
+}
+.bg-black{
+    background: #1F2D3D;
+}
+.hearder{
+    width: 100%;
+    height: 70px;
+    color: #FFFFFF;
+}
+.nav-menu{
+    height: 1080px;
+}
+.nav-menu-content{
+    border-radius: 0px !important;
+    height: 100%;
+}
+.content{
+    margin: 15px 0px 0px 15px;
+}

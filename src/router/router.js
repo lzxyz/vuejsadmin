@@ -4,14 +4,19 @@ import Router from 'vue-router'
 // 导入页面
 import LoginPage from '@/pages/Login'
 import IndexPage from '@/pages/Index'
+import AdminTpl from '@/template/Admin'
 
 Vue.use(Router)
 
 // 定义后台路由
 const routes = [
-  { path: '/', component: IndexPage },
   { path: '/Login', component: LoginPage },
-  { path: '/Index', component: IndexPage }
+  { path: '/',
+    component: AdminTpl,
+    children: [
+      { path: '/Index', component: IndexPage }
+    ]
+  }
 ]
 
 export default new Router({

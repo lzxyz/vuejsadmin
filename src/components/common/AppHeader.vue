@@ -1,5 +1,4 @@
 <template>
-	<el-row>
-	  <el-col :span="24"><div class="grid-content bg-purple-dark">asdasd</div></el-col>
-	</el-row>
+    <div class="hearder bg-black" >头部布局</div>
 </template>
+
