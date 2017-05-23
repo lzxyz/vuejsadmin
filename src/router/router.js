@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // 导入页面
+import AdminTpl from '@/template/Admin'
 import LoginPage from '@/pages/Login'
 import IndexPage from '@/pages/Index'
-import AdminTpl from '@/template/Admin'
+import SystemLog from '@/pages/SystemLog'
+import WebSite from '@/pages/WebSite'
 
 Vue.use(Router)
 
@@ -14,7 +16,9 @@ const routes = [
   { path: '/',
     component: AdminTpl,
     children: [
-      { path: '/Index', component: IndexPage }
+      { path: '/Index', component: IndexPage },
+      { path: '/SystemLog', component: SystemLog },
+      { path: '/WebSite', component: WebSite }
     ]
   }
 ]
