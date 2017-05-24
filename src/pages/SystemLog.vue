@@ -9,6 +9,25 @@
                 </el-breadcrumb>
             </el-col>
         </el-row>
+    
+        <el-row>
+          <el-col :span="24">
+            <el-form :inline="true" >
+            <el-form-item label="审批人">
+              <el-input  placeholder="审批人"></el-input>
+            </el-form-item>
+            <el-form-item label="活动区域">
+              <el-select  placeholder="活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+              </el-select>
+            </el-form-item><el-form-item>
+              <el-button type="primary" @click="onSubmit">查询</el-button>
+            </el-form-item>
+          </el-form>
+          </el-col>
+        </el-row>
+        
         <el-row>
             <el-col :span="24">
                 <el-table
@@ -44,6 +63,20 @@
                     </el-table-column>
                 </el-table>
             </el-col>
+        </el-row>
+        
+        <el-row>
+          <el-col :span="12">
+            <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page.sync="currentPage1"
+        :page-sizes="[20, 50, 100, 200]"
+        :page-size="20"
+        layout="total, sizes, prev, pager, next"
+        :total="1000">
+      </el-pagination>
+          </el-col>
         </el-row>
     </el-row>
 
