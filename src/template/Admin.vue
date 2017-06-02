@@ -12,9 +12,8 @@
             <el-col :span="20">
                 <div class="content">
                     <router-view></router-view>
+                     <AppFooter></AppFooter>
                 </div>
-
-                <AppFooter></AppFooter>
             </el-col>
         </el-row>
     </el-row>

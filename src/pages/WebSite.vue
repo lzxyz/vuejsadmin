@@ -1,7 +1,7 @@
 <template>
     <el-row>
         <el-row>
-            <el-col :span="24" style="height: 30px">
+            <el-col :span="24" class="breadcrumb">
                 <el-breadcrumb separator="/">
                     <el-breadcrumb-item :to="{ path: '/Index' }">系统面板</el-breadcrumb-item>
                     <el-breadcrumb-item>系统管理</el-breadcrumb-item>
