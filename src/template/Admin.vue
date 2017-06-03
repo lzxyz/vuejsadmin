@@ -10,9 +10,11 @@
                 <LeftMenu></LeftMenu>
             </el-col>
             <el-col :span="20">
-                <div class="content">
-                    <router-view></router-view>
-                     <AppFooter></AppFooter>
+                <div v-bar="{preventParentScroll: true, scrollThrottle: 30,}" class="wrapper">
+                    <div class="content" >
+                        <router-view></router-view>
+                        <AppFooter></AppFooter>
+                    </div>
                 </div>
             </el-col>
         </el-row>

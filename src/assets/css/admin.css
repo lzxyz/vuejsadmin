@@ -1,3 +1,98 @@
+
+html,body,#app{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.hearder{
+    width: 100%;
+    height: 70px;
+    color: #FFFFFF;
+}
+.nav-menu{
+    height: 100vh;
+}
+.nav-menu-content{
+    border-radius: 0px !important;
+    height: 100%;
+}
+.wrapper{
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    position: relative;
+}
+.content{
+    padding: 0px 0px 0px 15px ;
+}
+
+.breadcrumb{
+    margin: 15px 0px;
+}
+.hr-line{
+    border-color: #bfcbd9;
+    border-width:0.5px  ;
+    border-style: solid;
+}
+.list-page{
+    margin-top: 5px; 
+}
+.footer{
+    text-align: center;
+    font-size: 12px;
+    margin-top:5px ;
+}
+
+
+/*扩展CSS*/
+.vb > .vb-dragger {
+    z-index: 5;
+    width: 12px;
+    right: 0;
+}
+
+.vb > .vb-dragger > .vb-dragger-styler {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotate3d(0,0,0,0);
+    transform: rotate3d(0,0,0,0);
+    -webkit-transition:
+            background-color 100ms ease-out,
+            margin 100ms ease-out,
+            height 100ms ease-out;
+    transition:
+            background-color 100ms ease-out,
+            margin 100ms ease-out,
+            height 100ms ease-out;
+    background-color: rgba(48, 121, 244,.1);
+    margin: 5px 5px 5px 0;
+    border-radius: 20px;
+    height: calc(100% - 10px);
+    display: block;
+}
+
+.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.3);
+}
+
+.vb > .vb-dragger:hover > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.5);
+    margin: 0px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.5);
+    margin: 0px;
+    height: 100%;
+}
+
+.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244,.5);
+}
+
 .bg-blue{
     background: #20A0FF;
 }
@@ -13,33 +108,6 @@
 .bg-black{
     background: #1F2D3D;
 }
-
-
-.hearder{
-    width: 100%;
-    height: 70px;
-    color: #FFFFFF;
-}
-.nav-menu{
-    height: 1080px;
-}
-.nav-menu-content{
-    border-radius: 0px !important;
-    height: 100%;
-}
-.content{
-    /*margin: 15px 0px 0px 15px;*/
-    padding: 15px;
-    min-height: 768px;
-    max-height: 1080px;
-    overflow-y: scroll;
-
-}
-.breadcrumb{
-    height: 30px;
-    border-bottom: 1px solid #bfcbd9;
-    margin-bottom: 22px;
-}
-.list-page{
-    margin-top: 5px; 
+.bg-light-gray{
+    background: #E5E9F2;
 }

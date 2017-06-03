@@ -1,3 +1,3 @@
 <template>
-    <div> 这是一个fot</div>
+    <div class="footer bg-light-gray">© 2017 By DIY V1.0</div>
 </template>

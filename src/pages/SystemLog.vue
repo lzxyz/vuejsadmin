@@ -8,6 +8,7 @@
                     <el-breadcrumb-item>系统日志</el-breadcrumb-item>
                 </el-breadcrumb>
             </el-col>
+            <hr class="hr-line"/>
         </el-row>
     
         <el-row>
