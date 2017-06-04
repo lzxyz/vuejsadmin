@@ -11,7 +11,8 @@
             <hr class="hr-line"/>
         </el-row>
     
-        <el-row>
+        <!-- 搜索框 -->
+        <el-row class="search-box">
           <el-col :span="24">
             <el-form :inline="true" >
             <el-form-item label="审批人">
@@ -66,9 +67,9 @@
             </el-col>
         </el-row>
         
-        <el-row class='list-page'>
+        <el-row class='page-box'>
           <el-col :span="12" :offset="12">
-            <el-pagination
+            <el-pagination style="float:right"
               @size-change="handleSizeChange"
               @current-change="handleCurrentChange"
               :current-page.sync="currentPage1"

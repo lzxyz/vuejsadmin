@@ -25,6 +25,7 @@ html,body,#app{
 }
 .content{
     padding: 0px 0px 0px 15px ;
+    width: 100% !important;
 }
 
 .breadcrumb{
@@ -35,8 +36,11 @@ html,body,#app{
     border-width:0.5px  ;
     border-style: solid;
 }
-.list-page{
-    margin-top: 5px; 
+.search-box{
+    padding-top: 15px; 
+}
+.page-box{
+    margin: 10px 0px; 
 }
 .footer{
     text-align: center;
