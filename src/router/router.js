@@ -16,7 +16,7 @@ const routes = [
   { path: '/',
     component: AdminTpl,
     children: [
-      { path: '/Index', component: IndexPage },
+      { path: '/', component: IndexPage },
       { path: '/SystemLog', component: SystemLog },
       { path: '/WebSite', component: WebSite }
     ]

@@ -1,7 +1,7 @@
 <template>
     <div class="nav-menu">
-        <el-menu default-active="/Index" class="el-menu-vertical-demo nav-menu-content" unique-opened="true" @open="handleOpen" @close="handleClose" theme="dark" router="true">
-            <el-menu-item index="/Index"><i class="el-icon-message"></i>系统面板</el-menu-item>
+        <el-menu default-active="/" class="el-menu-vertical-demo nav-menu-content" unique-opened="true" @open="handleOpen" @close="handleClose" theme="dark" router="true">
+            <el-menu-item index="/"><i class="el-icon-message"></i>系统面板</el-menu-item>
             
             <el-submenu index='document'>
                 <template slot="title">

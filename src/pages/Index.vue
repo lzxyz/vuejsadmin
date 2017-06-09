@@ -1,15 +1,16 @@
 <template>
     <el-row>
+        <!-- 导航 -->
         <el-row>
-            <el-col :span="24" style="height: 30px">
+            <el-col :span="24" class="breadcrumb">
                 <el-breadcrumb separator="/">
-                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-                    <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-                    <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-                    <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+                    <el-breadcrumb-item :to="{ path: '/Index' }">系统面板</el-breadcrumb-item>
+                    <el-breadcrumb-item>系统主页</el-breadcrumb-item>
                 </el-breadcrumb>
             </el-col>
+            <hr class="hr-line"/>
         </el-row>
+
         <el-row>
             <el-col :span="24">
                 <el-table
