@@ -1,78 +1,37 @@
 <template>
-	<el-row>
-		<el-col :span="6">
-			<el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
-				<el-form-item label="密码" prop="pass">
-					<el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
+	<el-row class="login">
+        <div class="login-form">
+			<el-form :model="loginForm" :rules="loginRule"  ref="loginFrom" label-width="80px">
+				<el-form-item label="登录账号" prop="username">
+					<el-input name="username" v-model="loginForm.username" auto-complete="off"></el-input>
 				</el-form-item>
-				<el-form-item label="确认密码" prop="checkPass">
-					<el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off"></el-input>
+				<el-form-item label="登录密码" prop="password">
+					<el-input type="password" v-model="loginForm.password" auto-complete="off"></el-input>
 				</el-form-item>
-				<el-form-item label="年龄" prop="age">
-					<el-input v-model.number="ruleForm2.age"></el-input>
-				</el-form-item>
-				<el-form-item>
-					<el-button type="primary" @click="submitForm('ruleForm2')">提交</el-button>
-					<el-button @click="resetForm('ruleForm2')">重置</el-button>
+				<el-form-item style="margin-bottom: 10px">
+					<el-button type="primary" @click="submitForm('ruleForm2')">登录</el-button>
 				</el-form-item>
 			</el-form>
-		</el-col>
+        </div>
 	</el-row>
 </template>
 
 <script>
   export default {
     data () {
-      var checkAge = (rule, value, callback) => {
-        if (!value) {
-          return callback(new Error('年龄不能为空'))
-        }
-        setTimeout(() => {
-          if (!Number.isInteger(value)) {
-            callback(new Error('请输入数字值'))
-          } else {
-            if (value < 18) {
-              callback(new Error('必须年满18岁'))
-            } else {
-              callback()
-            }
-          }
-        }, 1000)
-      }
-      var validatePass = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入密码'))
-        } else {
-          if (this.ruleForm2.checkPass !== '') {
-            this.$refs.ruleForm2.validateField('checkPass')
-          }
-          callback()
-        }
-      }
-      var validatePass2 = (rule, value, callback) => {
-        if (value === '') {
-          callback(new Error('请再次输入密码'))
-        } else if (value !== this.ruleForm2.pass) {
-          callback(new Error('两次输入密码不一致!'))
-        } else {
-          callback()
-        }
-      }
       return {
-        ruleForm2: {
-          pass: '',
-          checkPass: '',
-          age: ''
+        loginForm: {
+          username: '',
+          password: ''
         },
-        rules2: {
-          pass: [
-            { validator: validatePass, trigger: 'blur' }
+        loginRule: {
+          username: [
+            { required: true, message: '请输入登录账号', trigger: 'blur' },
+            { min: 4, max: 16, message: '账号长度在 4 到 16 个字符', trigger: 'blur' }
           ],
-          checkPass: [
-            { validator: validatePass2, trigger: 'blur' }
-          ],
-          age: [
-            { validator: checkAge, trigger: 'blur' }
+          password: [
+            { required: true, message: '请输入登录密码', trigger: 'blur' },
+            { min: 6, max: 16, message: '密码长度在 6 到 16 个字符', trigger: 'blur' }
           ]
         }
       }

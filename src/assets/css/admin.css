@@ -27,6 +27,21 @@ html,body,#app{
     padding: 0px 0px 0px 15px ;
     width: 100% !important;
 }
+.login{
+    background-color: #f1f2f7;
+    background-image: url(../image/login-bg.jpg);
+    height:100%;
+}
+.login-form{
+    max-width: 300px;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding:20px;
+    -webkit-border-radius: 5px;
+    background-color: rgba(254, 254, 254, 0.4);
+    transform: translateY(80%);
+    position: relative;
+}
 
 .breadcrumb{
     margin: 15px 0px;
