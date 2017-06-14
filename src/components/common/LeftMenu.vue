@@ -15,7 +15,7 @@
                 <template slot="title">
                     <i class="el-icon-message"></i>用户管理
                 </template>
-                <el-menu-item index="3-1">用户列表</el-menu-item>
+                <el-menu-item index="/User/index">用户列表</el-menu-item>
             </el-submenu>
 
             <el-submenu index="system">

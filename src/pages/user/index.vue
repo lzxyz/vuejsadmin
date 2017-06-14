@@ -134,7 +134,7 @@
 </template>
 
 <script>
-  import { login } from '../api/api'
+  // import { login } from '../api/api'
   export default {
     data () {
       return {
@@ -193,9 +193,8 @@
       },
       // 分页
       handleCurrentChange () {
-        var loginParams = { username: '123', password: '12313' }
-        var result = login(loginParams)
-        console.log(result)
+        // var loginParams = { username: '123', password: '12313' }
+        // login(loginParams)
         this.total = this.total + 10
       },
       // 分页条数切换

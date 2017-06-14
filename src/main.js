@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-default/index.css'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import VueBar from 'vuebar'
+import Mock from './api/mock/mock'
+Mock.bootstrap()
 
 Vue.config.productionTip = false
 

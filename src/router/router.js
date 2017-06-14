@@ -7,6 +7,7 @@ import LoginPage from '@/pages/Login'
 import IndexPage from '@/pages/Index'
 import SystemLog from '@/pages/SystemLog'
 import WebSite from '@/pages/WebSite'
+import UserIndex from '@/pages/user/Index'
 
 Vue.use(Router)
 
@@ -18,7 +19,8 @@ const routes = [
     children: [
       { path: '/', component: IndexPage },
       { path: '/SystemLog', component: SystemLog },
-      { path: '/WebSite', component: WebSite }
+      { path: '/WebSite', component: WebSite },
+      { path: '/UserIndex', component: UserIndex }
     ]
   }
 ]
