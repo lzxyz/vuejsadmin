@@ -20,7 +20,7 @@ const routes = [
       { path: '/', component: IndexPage },
       { path: '/SystemLog', component: SystemLog },
       { path: '/WebSite', component: WebSite },
-      { path: '/UserIndex', component: UserIndex }
+      { path: '/User/Index', component: UserIndex }
     ]
   }
 ]

@@ -1,14 +1,14 @@
 <template>
     <div class="nav-menu">
-        <el-menu default-active="/" class="el-menu-vertical-demo nav-menu-content" unique-opened="true" @open="handleOpen" @close="handleClose" theme="dark" router="true">
+        <el-menu default-active="/" class="el-menu-vertical-demo nav-menu-content" unique-opened theme="dark" router>
             <el-menu-item index="/"><i class="el-icon-message"></i>系统面板</el-menu-item>
-            
+
             <el-submenu index='document'>
                 <template slot="title">
                     <i class="el-icon-document"></i>文档管理
                 </template>
-                <el-menu-item index="2-1">文档列表</el-menu-item>
-                <el-menu-item index="2-2">文档分类</el-menu-item>
+                <el-menu-item index="article/index">文档列表</el-menu-item>
+                <el-menu-item index="article/subject">文档分类</el-menu-item>
             </el-submenu>
 
             <el-submenu index="user">
